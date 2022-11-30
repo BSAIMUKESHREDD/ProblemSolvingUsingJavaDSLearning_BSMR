@@ -22,6 +22,7 @@ public class AllPermutations {
             } else {
                 for (int i = 0; i < array.size(); i++) {
                     List<Integer> newArray = new ArrayList<Integer>(array);
+                    System.out.println(i);
                     newArray.remove(i);
                     List<Integer> newPermutation = new ArrayList<Integer>(currentPermutation);
                     newPermutation.add(array.get(i));
