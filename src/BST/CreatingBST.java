@@ -171,6 +171,7 @@ public static int diameter(Node root){
         int diam3 = height(root.left)+height(root.right)+1;
         return Math.max(diam3,Math.max(diam1,diam2));
 }
+
 // approach 2 // o(n)
 
  static class TreeInfo{
