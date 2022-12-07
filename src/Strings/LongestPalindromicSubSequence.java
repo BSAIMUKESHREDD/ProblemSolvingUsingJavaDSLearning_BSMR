@@ -1,3 +1,5 @@
+package Strings;
+
 public class LongestPalindromicSubSequence {
 
     public static void main(String[] args) {

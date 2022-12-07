@@ -1,3 +1,5 @@
+package Strings;
+
 public class underScorify {
     public static String underscorifySubstring(String str, String substring) {
         // Write your code here.

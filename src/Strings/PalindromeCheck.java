@@ -1,3 +1,5 @@
+package Strings;
+
 public class PalindromeCheck {
 
     public static boolean isPalindrome(String str) {

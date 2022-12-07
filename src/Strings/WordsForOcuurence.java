@@ -1,3 +1,5 @@
+package Strings;
+
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
