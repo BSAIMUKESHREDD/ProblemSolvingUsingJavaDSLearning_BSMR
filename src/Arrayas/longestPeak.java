@@ -5,39 +5,35 @@ import java.util.Arrays;
 public class longestPeak {
 
     public static void main(String[] args) {
-        var input = new int[]{1, 2, 3, 3, 4, 0, 10, 6, 5, -1, -3, 2, 3};
+        var input = new int[]{1, 2, 3, 4,5,1};
         var expected = 6;
         System.out.println(longestPeak(input));
     }
 
-    public static int longestPeak(int[] array) {
+    public static int longestPeak(int[] A) {
         // Write your code here.
-        int count = 0;
 
-        int m = 0;
-        for (int i = 1; i < array.length - 2; ) {
-            if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
-                int ans = 1;
-                int j = i;
-                while (j > 0 && array[j] > array[j - 1]) {
-                    j--;
-                    ans++;
-                }
-                while (i < array.length - 1 && array[i] > array[i + 1]) {
-                    i++;
-                    ans++;
-                }
-                count = Math.max(count, ans);
+        int N = A.length;
+        int ans = 0, base = 0;
+        while (base < N) {
+            int end = base;
+            // if base is a left-boundary
+            if (end + 1 < N && A[end] < A[end + 1]) {
+                // set end to the peak of this potential mountain
+                while (end + 1 < N && A[end] < A[end + 1]) end++;
 
-            } else {
-                i++;
+                // if end is really a peak..
+                if (end + 1 < N && A[end] > A[end + 1]) {
+                    // set end to the right-boundary of mountain
+                    while (end + 1 < N && A[end] > A[end + 1]) end++;
+                    // record candidate answer
+                    ans = Math.max(ans, end - base + 1);
+                }
             }
 
-
-
-            //System.out.println(max);
-
+            base = Math.max(end, base + 1);
         }
-        return count;
+
+        return ans;
     }
 }
