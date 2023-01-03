@@ -45,7 +45,5 @@ public class knapsack {
             }
         }
         return sequence;
-
-
     }
 }
