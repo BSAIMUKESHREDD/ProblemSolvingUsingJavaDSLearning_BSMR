@@ -25,6 +25,7 @@ public class removeDuplicatesInplaceArray {
     //good solution
     /*public int removeDuplicates(int[] nums) {
         int i = nums.length > 0 ? 1 : 0;
+        // learn to write onliner if statements
         for (int n : nums)
             if (n > nums[i-1])
                 nums[i++] = n;
