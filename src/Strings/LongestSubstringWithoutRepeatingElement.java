@@ -24,8 +24,6 @@ public class LongestSubstringWithoutRepeatingElement {
                 hashSet.add(str.charAt(j));
                 j++;
                 max = Math.max(max,hashSet.size() );
-
-
             } else {
                 hashSet.remove(str.charAt(i));
                 i++;
