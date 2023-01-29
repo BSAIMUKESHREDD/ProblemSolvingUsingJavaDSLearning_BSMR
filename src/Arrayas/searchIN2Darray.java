@@ -8,6 +8,7 @@ public class searchIN2Darray {
         System.out.println( searchMatrix(mat,target));
     }
     public static boolean searchMatrix(int[][] matrix, int target) {
+        // start with first row last cloumn element
         int r=0;
         int c=matrix[0].length-1;
         while(r<matrix.length && c>=0){
