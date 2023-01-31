@@ -1,12 +1,16 @@
 package Arrayas;
 
+import java.util.Arrays;
+
 public class mergeSortedArray {
 
 
     public static void main(String[] args) {
         int[] a ={1,2,5,0,0,0};
-        int[] b = {8,57,95};
-        merge(a,3,b,3);
+        int ans = Arrays.binarySearch(a,0);
+        System.out.println(ans);
+       /* int[] b = {8,57,95};
+        merge(a,3,b,3);*/
     }
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
