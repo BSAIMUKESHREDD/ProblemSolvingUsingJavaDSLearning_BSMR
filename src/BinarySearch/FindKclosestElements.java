@@ -5,12 +5,12 @@ import java.util.*;
 
 public class FindKclosestElements {
     public static void main(String[] args) {
-        int[] ques = {1,2,3,4,5};
-        findClosestElements(ques,4, -1);
+        int[] ques = {1,2,3,4,5,7,8,10};
+        findClosestElements(ques,4, 3);
     }
     // Approach:
     // Using binary search and a sliding window, find the midpoint where,
-    // the integers between midpoint and midpoint + k is the k closest integers to x.
+    // the integers between midpoint and midpoint + k is the k the closest integers to x.
 
     public static List<Integer> findClosestElements(int[] arr, int k, int x) {
 
@@ -32,7 +32,7 @@ public class FindKclosestElements {
             }
         }
 
-        // Input all the k closest integers into the result.
+        // Input all the k the closest integers into the result.
         List<Integer> result = new ArrayList<>(k);
         for (int i = left; i < left + k; i++) {
             result.add(arr[i]);
